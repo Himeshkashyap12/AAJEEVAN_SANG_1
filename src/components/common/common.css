@@ -1,0 +1,15 @@
+.ant-otp-input {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #F81B3E; /* Optional: Set a border bottom color when inactive */
+}
+
+.ant-otp-input:focus {
+    border-bottom: 1px solid #F81B3E; /* Optional: Set a border bottom color when inactive */
+    border-radius: 0;
+    outline: none; 
+    box-shadow: none;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+    border-radius: 16px!important;
+}
