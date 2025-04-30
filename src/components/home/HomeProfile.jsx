@@ -12,7 +12,7 @@ const HomeProfile = ({heading,to}) => {
                 </div>
             <Row gutter={[20, 20]} className="overflow-hidden">
                 <Col span={6}>
-                    <div className=" ">
+                    <div className="w-full ">
                         <Image
                             preview={false}
                             className="rounded-2xl !size-[300px] w-full h-auto "

@@ -8,6 +8,9 @@ import MessagePage from "./pages/MessagePage"
 import PlanPage from "./pages/PlanPage"
 import AuthPage from "./pages/AuthPage"
 import ProfilePage from "./pages/ProfilePage"
+import EditProfilePage from "./pages/EditProfilePage"
+import PartnerPreferencePage from "./pages/PartnerPreferencePage"
+import NotificationPage from "./pages/NotificationPage"
 function App() {
   return (
     <>
@@ -23,6 +26,9 @@ function App() {
           <Route path="discover" element={<DiscoverPage />} />
           <Route path="likes" element={<LikesPage />} />
           <Route path="message" element={<MessagePage />} />
+          <Route path="edit-profile" element={<EditProfilePage />} />
+          <Route path="partner-preference" element={<PartnerPreferencePage />} />
+          <Route path="notification-page" element={<NotificationPage />} />
         </Route>
         <Route path="/" element={<CustomLayout sidebar={false} />}>
           <Route path="plan" element={<PlanPage />} />

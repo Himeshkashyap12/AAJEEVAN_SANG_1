@@ -1,0 +1,9 @@
+
+
+.edit-profile .ant-tabs .ant-tabs-nav::before{border: 0;}
+.edit-profile .ant-tabs-tab{margin: 0!important;}
+.edit-profile .ant-tabs-nav-list .ant-tabs-tab-active{ background-color: #F81B3E!important;width: 220px; border-radius: 50px; border-bottom:none ;color: #000!important; display: flex; justify-content: center;}
+.edit-profile .ant-tabs-nav-list .ant-tabs-tab{background-color: #E6E6E6;width: 220px; border-radius: 50px; border-bottom:none ;color: #000!important; display: flex; justify-content: center;}
+.edit-profile .ant-tabs-nav-list .ant-tabs-ink-bar{height: 0!important;}
+.edit-profile .ant-tabs-nav-list{ margin-left: 50px;   padding: 12px 20px;background-color: #E6E6E6; border-radius: 10px  10px 0 0 ; width: 75%; display: flex; justify-content: space-between;}
+ .edit-profile .ant-tabs-nav{margin-bottom: 0;}
