@@ -4,7 +4,7 @@ import "./discover.css"
 import CustomText from "../common/CustomText";
 import { FilterOutlined } from "@ant-design/icons";
 import ProfileCard from "../common/ProfileCard";
-import AllDiscover from "./allDiscover";
+import AllDiscover from "./AllDiscover";
 import SelectedDiscover from "./SelectedDiscover";
 const Discover=()=>{
     const [selectedKey,setSelectedKey]=useState(1)
