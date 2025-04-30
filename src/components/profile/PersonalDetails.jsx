@@ -23,7 +23,7 @@ const PersonalDetails = ({ setCurrentStep }) => {
   return (
     <>
       <Row>
-        <div className="  bg-white rounded-2xl w-[530px] p-5 shadow-2xl">
+        <div className="bg-white rounded-2xl w-[530px] p-5 shadow-2xl">
           <div className="flex justify-center">
             <Image
               preview={false}
@@ -31,7 +31,7 @@ const PersonalDetails = ({ setCurrentStep }) => {
               src={logo}
             />
           </div>
-          <div className="flex flex-col gap-[16px]  max-h-[300px] overflow-y-auto">
+          <div className="flex flex-col gap-[16px]  max-h-[400px] overflow-y-auto">
             <div className="flex flex-col ">
               <CustomText
                 className={"!text-start !text-[24px] font-[500] "}

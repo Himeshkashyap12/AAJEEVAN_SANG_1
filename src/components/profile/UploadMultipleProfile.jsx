@@ -3,7 +3,7 @@ import logo from "../../assets/logo/ajeevanLogo.png";
 import CustomText from "../common/CustomText";
 import CustomButton from "../common/CustomButton";
 import { useState } from "react";
-import CustomFileUpload from "./CustomFileUpload";
+import CustomFileUpload from "../common/CustomFileUpload";
 const UploadMultipleProfile=()=>{
     const [disableNext,setDisableNext]=useState(false)
     return(

@@ -6,6 +6,7 @@ import "./style/color.css";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import { ConfigProvider } from "antd";
+import { BrowserRouter } from "react-router-dom";
 const theme = createTheme({
   palette: {
     primary: {
@@ -22,7 +23,9 @@ createRoot(document.getElementById("root")).render(
     <ThemeProvider
      theme={theme}
     >
+      <BrowserRouter>
       <App />
+      </BrowserRouter>
     </ThemeProvider>
     </ConfigProvider>
   </StrictMode>

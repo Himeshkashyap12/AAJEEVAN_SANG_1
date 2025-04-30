@@ -7,7 +7,6 @@ import upload from "../../assets/uploadIcon/uploadIcon.png"
 import { useState } from "react";
 const UploadProfile=({setDocument})=>{
       const [disableNext,setDisableNext]=useState(false)
-    
     return(
         <>
          <Row>
@@ -33,8 +32,6 @@ const UploadProfile=({setDocument})=>{
               src={upload}
             />
           </div>
-          
-         
           </div>
           <div className="flex flex-col pt-[16px]">
             <CustomButton
@@ -46,7 +43,6 @@ const UploadProfile=({setDocument})=>{
             <CustomText text={"Your photos are 100% safe."}/>
             <CustomText text={"Photo Privacy controls available in Settings"}/>
             </div>
-            
           </div>
         </div>
       </Row>

@@ -2,6 +2,8 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid #F81B3E; /* Optional: Set a border bottom color when inactive */
+    width: 50px;
+
 }
 
 .ant-otp-input:focus {

@@ -9,5 +9,6 @@
   --color-red:"#951025";
   --color-gray:"#D9D9D9";
   --color-required:"#F81B3E";
-  --color-extremelightGgray:"#7C7C7C"
+  --color-extremelightGgray:"#7C7C7C";
+  --color-borderColor:"linear-gradient(180deg, #F81B3E 0%, #4E6881 100%)"
 }

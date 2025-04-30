@@ -26,7 +26,7 @@ const Profile = () => {
             height="100%"
           />
         </div>
-        <div className="profile flex justify-center md:w-[85%] w-[100%] left-0 right-0 mx-auto  absolute top-2" >
+        <div className="profile flex justify-center md:w-[85%] w-[100%] left-0 right-0 mx-auto  absolute top-10" >
           {currentStep!=null && <Steps
         current={currentStep}
         colorTextDisabled={"red"}

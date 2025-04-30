@@ -17,7 +17,7 @@ const BasicDetails = ({setCurrentStep}) => {
               src={logo}
             />
           </div>
-          <div className="flex flex-col gap-[16px]  max-h-[300px] overflow-y-auto">
+          <div className="flex flex-col gap-[16px]  max-h-[400px] overflow-y-auto">
           <div className="flex flex-col ">
             <CustomText
               className={"!text-start !text-[24px] font-[500] "}
@@ -43,18 +43,18 @@ const BasicDetails = ({setCurrentStep}) => {
               <div className="w-full">
                 <CustomInput
                   placeholder={"First name"}
-                  className={"!w-[200px]"}
+                  className={"!w-[220px]"}
                 />
               </div>
             </Col>
             <Col span={12}>
-              <CustomInput placeholder={"Last name"} className={"!w-[200px]"} />
+              <CustomInput placeholder={"Last name"} className={"!w-[220px]"} />
             </Col>
           </Row>
           <Row>
             <Col span={24}>
               <CustomInput
-                className={"w-[430px]"}
+                className={"w-[465px]"}
                 placeholder={"Email Address"}
               />
             </Col>
@@ -63,7 +63,7 @@ const BasicDetails = ({setCurrentStep}) => {
             <Col span={24}>
               <CustomInput
                 type={"date"}
-                className={"w-[430px]"}
+                className={"w-[465px]"}
                 placeholder={"Date of birth"}
               />
             </Col>
@@ -72,7 +72,7 @@ const BasicDetails = ({setCurrentStep}) => {
             <Col span={24}>
               <CustomInput
                 phoneNumber
-                className={"w-[430px]"}
+                className={"w-[465px]"}
                 placeholder={"Mobile Number"}
               />
             </Col>

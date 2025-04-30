@@ -1,0 +1,6 @@
+ .ant-tabs .ant-tabs-nav::before{border: 0;}
+ .ant-tabs-tab{margin: 0!important;}
+.ant-tabs-nav-list .ant-tabs-tab-active{ background-color: #F81B3E!important;width: 220px; border-radius: 50px; border-bottom:none ;color: #fff!important; display: flex; justify-content: center;}
+.ant-tabs-nav-list .ant-tabs-tab{background-color: #E6E6E6;width: 220px; border-radius: 50px; border-bottom:none ;color: #fff!important; display: flex; justify-content: center;}
+.ant-tabs-nav-list .ant-tabs-ink-bar{height: 0!important;}
+.ant-tabs-nav-list{    padding: 6px 10px;background-color: #E6E6E6; border-radius: 50px;}
