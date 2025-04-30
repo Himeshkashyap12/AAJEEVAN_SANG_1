@@ -2,7 +2,7 @@ import CustomText from "../common/CustomText";
 import profilePhoto from "../../assets/profile/profilePhoto.jpg"
 import { Avatar, Image } from "antd";
 import editIcon from "../../assets/icons/edit.png"
-import PartnerColumn from "./Partnercolumn";
+import PartnerColumn from "./PartnerColumn";
 const PartnerPreferenceDetails = () => {
     return (
         <div className=" w-[75%] shadow-2xl mx-[50px] px-[30px] py-[20px] rounded-b-xl">
