@@ -1,9 +1,9 @@
-import Auth from "../components/auths/Auths";
+import Auths from "../components/auths/Auths";
 
 const AuthPage=()=>{
     return(
         <>
-        <Auth/>
+        <Auths/>
         </>
     )
 }
