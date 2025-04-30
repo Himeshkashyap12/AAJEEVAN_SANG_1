@@ -1,4 +1,4 @@
-import Auth from "../components/auth/auth";
+import Auth from "../components/auth/Auth.jsx";
 
 const AuthPage=()=>{
     return(
