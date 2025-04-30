@@ -2,7 +2,7 @@ import { Col, Row, Segmented, Tabs } from "antd";
 import {  useState } from "react";
 import "./discover.css"
 import CustomText from "../common/CustomText";
-import AllDiscover from "./AllDiscover";
+import AllDiscover from "./AllDiscover.jsx";
 import SelectedDiscover from "./SelectedDiscover";
 const Discover=()=>{
     const [selectedKey,setSelectedKey]=useState(1)
