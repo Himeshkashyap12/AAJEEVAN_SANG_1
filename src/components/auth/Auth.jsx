@@ -1,7 +1,7 @@
 import { Image, Row } from "antd";
 import authBackgroundImaage from "../../assets/authImages/authBackground.jpg";
 import CustomText from "../common/CustomText";
-import SendOtpLogin from "./sendOtpLogin";
+import SendOtpLogin from "./SendOtpLogin";
 import SendOtpSignUp from "./SendOtpSignUp";
 import VerifyOtpLogin from "./VerifyOtpLogin";
 import VerifyOtpSignUp from "./VerifyOtpSignUp";
