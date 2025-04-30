@@ -2,7 +2,7 @@ import { Avatar, Col, Image, Row } from "antd";
 import profileImage from "../../assets/profileCardImages/profileCardMain.jpg"
 import CustomText from "./CustomText";
 import verify from "../../assets/icons/verify.png"
-import personalIcon from "../../assets/icons/personalCard.png"
+import personalIcon from "../../assets/icons/personalcard.png"
 import heart from "../../assets/icons/heart.png"
 import check from "../../assets/icons/check.png"
 import star from "../../assets/icons/star.png"
