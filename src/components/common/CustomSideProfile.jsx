@@ -1,10 +1,12 @@
-import { Avatar, Progress } from "antd";
+import { Avatar, Image, Progress } from "antd";
 import profile from "../../assets/profile/profilePhoto.jpg"
 import CustomText from "./CustomText";
 import CustomButtonTwo from "./CustomButtonTwo";
 import { BellFilled, RightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-
+import partner from "../../assets/icons/partner.png"
+import language from "../../assets/icons/language.png"
+import help from "../../assets/icons/help.png"
 const CustomSideProfile = () => {
     const navigate=useNavigate()
     return (
@@ -34,7 +36,7 @@ const CustomSideProfile = () => {
                     <div onClick={()=>{navigate("/partner-preference")}}  className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
-                                 <BellFilled style={{ color: "#F81B3E", fontSize: "24px" }} />
+                                 <Image src={partner} className="!w-[20px] !h-[30px] object-fit"/>
                             </div>
                             <div className="flex flex-col gap-[10px]">
                                 <CustomText className={"text-[14px] font-[500]"} text={"Partner Preference"} />
@@ -58,7 +60,8 @@ const CustomSideProfile = () => {
                     <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
-                                 <BellFilled style={{ color: "#F81B3E", fontSize: "24px" }} />
+                            <Image src={language} className="!w-[24px] !h-[24px] object-fit"/>
+
                             </div>
                             <div className="flex flex-col gap-[10px]">
                                 <CustomText className={"text-[14px] font-[500]"} text={"Language"} />
@@ -70,7 +73,8 @@ const CustomSideProfile = () => {
                     <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
-                                 <BellFilled style={{ color: "#F81B3E", fontSize: "24px" }} />
+                            <Image src={help} className="!w-[24px] !h-[24px] object-fit"/>
+
                             </div>
                             <div className="flex flex-col gap-[10px]">
                                 <CustomText className={"text-[14px] font-[500]"} text={"Help Center"} />

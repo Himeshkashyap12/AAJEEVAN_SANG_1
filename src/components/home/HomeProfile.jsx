@@ -15,7 +15,7 @@ const HomeProfile = ({heading,to}) => {
                     <div className="w-full ">
                         <Image
                             preview={false}
-                            className="rounded-2xl !size-[300px] w-full h-auto "
+                            className="rounded-2xl !size-[300px] w-full h-auto  object-cover"
                             src={profileImage}
                         />
                     </div>
