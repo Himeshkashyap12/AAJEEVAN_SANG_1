@@ -25,7 +25,7 @@ const CustomHeader=()=>{
             </div>
             <div className="menu flex gap-[30px]">
                 <CustomSearch/>
-                <Button  className="!rounded-full !text-[14px] !font-[600]"><Avatar className="!size-[18px]" src={upgrade}/>    Upgrade</Button>
+                <Button onClick={()=>{navigate("/plan")}}  className="!rounded-full !text-[14px] !font-[600]"><Avatar className="!size-[18px]" src={upgrade}/>    Upgrade</Button>
             </div>
             <div className="profile-icon flex gap-3 items-center">
               <div  className="cursor-pointer" onClick={()=>navigate("/notification-page")} > <BellFilled style={{fontSize:"24px"}} /></div>
