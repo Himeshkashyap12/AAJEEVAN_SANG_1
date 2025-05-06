@@ -2,11 +2,13 @@ import { Col, Image, Row } from "antd";
 import profileImage from "../../assets/profile/profile.png"
 import CustomText from "../common/CustomText";
 import { Link } from "react-router-dom";
+import CustoSlider from "../common/CustomSlider";
 const HomeProfile = ({heading,to}) => {
     return (
         <>
         <div className="w-[80%] !overflow-hidden " >
         <div className="flex justify-between items-center pb-[16px]">
+
                 <CustomText className={"!text-[24px] font-[400]"} text={heading}/>
                 <Link className={"!text-[14px] font-[300] !text-secondary"} to={to} >View All</Link>
                 </div>
@@ -48,8 +50,8 @@ const HomeProfile = ({heading,to}) => {
                     </div>
                 </Col>
 
-
             </Row>
+
             </div>
 
         </>

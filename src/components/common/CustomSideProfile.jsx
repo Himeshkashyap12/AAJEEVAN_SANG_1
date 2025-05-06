@@ -11,7 +11,7 @@ const CustomSideProfile = () => {
     const navigate=useNavigate()
     return (
         <>
-            <div className="xl:w-[25%] w-[40%] mx-auto shadow-2xl rounded-xl fixed right-[50px] mt-[40px] p-[24px] ">
+            <div className="xl:w-[25%] w-[40%] mx-auto shadow-2xl rounded-xl  right-[50px] mt-[40px] p-[24px] ">
                 <div className="flex flex-col  gap-[24px]">
                     <div className="flex flex-col justify-center items-center">
                         <Avatar className="!size-[100px]" src={profile} />

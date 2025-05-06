@@ -7,6 +7,8 @@ import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import { ConfigProvider } from "antd";
 import { BrowserRouter } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const theme = createTheme({
   palette: {
     primary: {

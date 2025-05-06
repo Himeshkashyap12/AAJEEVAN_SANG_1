@@ -13,7 +13,7 @@ const Discover=()=>{
         {
           key: '1',
           label: <CustomText  className={`${selectedKey===1?"!text-[#fff]":"text-[#fff]"} !text-[16px] !font-[400]`} text={"All"}/>,
-          children: <AllDiscover allDiscover={[{},{},[]]}/>,
+          children: <AllDiscover allDiscover={[{},{},{}]}/>,
         },
         {
           key: '2',
@@ -25,7 +25,7 @@ const Discover=()=>{
       
     return(
         <>
-        <div className="py-[24px]  a" >
+        <div className="py-[24px]  " >
         <Tabs centered  defaultActiveKey="1" items={items} onChange={tabSelectChange} />
         </div>   
      

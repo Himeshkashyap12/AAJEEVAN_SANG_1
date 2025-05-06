@@ -24,6 +24,7 @@ function App() {
         <Route path="/" element={<CustomLayout />}>
           <Route index element={<HomePage />} />
           <Route path="discover" element={<DiscoverPage />} />
+          <Route path="discover" element={<DiscoverPage />} />
           <Route path="likes" element={<LikesPage />} />
           <Route path="message" element={<MessagePage />} />
           <Route path="edit-profile" element={<EditProfilePage />} />
