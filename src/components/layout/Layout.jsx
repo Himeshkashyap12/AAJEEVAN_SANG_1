@@ -35,9 +35,9 @@ const CustomLayout=({sidebar=true})=>{
         <Content  style={contentStyle}>
           <Outlet/>
         </Content>
-       {sidebar && <Sider  style={siderStyle}>
-          <CustomSideProfile/>
-        </Sider>}
+        {/* {sidebar && <Sider  style={siderStyle}>
+            <CustomSideProfile/>
+          </Sider>} */}
       </Layout>
     </Layout>
     </Flex>

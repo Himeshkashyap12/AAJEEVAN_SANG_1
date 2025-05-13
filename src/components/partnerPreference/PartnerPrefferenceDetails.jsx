@@ -5,7 +5,7 @@ import editIcon from "../../assets/icons/edit.png"
 import PartnerColumn from "./PartnerColumn";
 const PartnerPreferenceDetails = () => {
     return (
-        <div className=" w-[75%] shadow-2xl mx-[50px] px-[30px] py-[20px] rounded-b-xl">
+        <div className="shadow-2xl  px-[30px] py-[20px] rounded-b-xl">
             <div className="flex justify-end ">
                 <div className="flex gap-[10px]">
                     <Image preview={false} className="!size-[24px]" src={editIcon} />

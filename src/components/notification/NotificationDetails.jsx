@@ -4,7 +4,7 @@ import profilePhoto from "../../assets/profile/profilePhoto.jpg"
 import CustomButtonTwo from "../common/CustomButtonTwo";
 const NotificationDetails = () => {
     return (
-        <div className=" w-[75%] shadow-2xl mx-[50px] px-[30px] py-[20px] rounded-b-xl flex flex-col gap-[24px]">
+        <div className="  shadow-2xl px-[30px] py-[20px] rounded-b-xl flex flex-col gap-[24px]">
            
     
           {[1,2,3].map(()=>{

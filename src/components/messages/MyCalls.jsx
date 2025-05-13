@@ -4,15 +4,30 @@ import CustomText from "../common/CustomText";
 import { Link } from "react-router-dom";
 import CustomSearch from "../common/CustomSearch";
 import CustomButtonTwo from "../common/CustomButtonTwo";
-// import MessageConnected from "./MessageConnected";
 import { useState } from "react";
 import AllCalls from "./AllCalls";
-// import MessageConnectionRequest from "./MessageConnectionRequest";
+import CustomSlider from "../common/CustomSlider";
 const MyCalls = ({ messageConnection=[1,2,3,4,5,5,65,6,66,7,77,23,34,]}) => {
     const [connection,setConnection]=useState("connected")
+      const profileData=[
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user}, 
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user},
+            {img:user}
+        ]
     return (
         <>
-            <div className="w-[80%] ps-[50px] pe-[20px] flex flex-col gap-[20px] ">
+            <div className="flex flex-col gap-[20px] ">
 
                 <div className="flex justify-between items-center pb-[16px]">
                     <div className="flex flex-col gap-[5px]">
@@ -21,7 +36,7 @@ const MyCalls = ({ messageConnection=[1,2,3,4,5,5,65,6,66,7,77,23,34,]}) => {
                     </div>
                     <Link className={"!text-[14px] font-[300] !text-secondary"}>View All</Link>
                 </div>
-                <div className="flex gap-[10px] !overflow-x-hidden">
+                {/* <div className="flex gap-[10px] !overflow-x-hidden">
                     {messageConnection.map(() => {
                         return (
                             <>
@@ -37,6 +52,14 @@ const MyCalls = ({ messageConnection=[1,2,3,4,5,5,65,6,66,7,77,23,34,]}) => {
                             </>
                         )
                     })}
+                </div> */}
+                  <div className="max-w-[1400px]  pe-[50px]  ">
+              <CustomSlider
+                slides={profileData}
+                SlideDataCount={12}
+                centerMode={true}
+                profileMessage
+              />
                 </div>
                 <div className="!w-[70%]">
                     <CustomSearch className={"!w-[700px] !bg-[#E6E6E6]"} />

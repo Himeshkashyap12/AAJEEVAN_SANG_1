@@ -7,8 +7,7 @@ import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import { ConfigProvider } from "antd";
 import { BrowserRouter } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,8 +22,7 @@ createRoot(document.getElementById("root")).render(
       theme={{ token: { colorPrimary:"#F81B3E" } }}
     >
     <ThemeProvider
-     theme={theme}
-    >
+     theme={theme}>
       <BrowserRouter>
       <App />
       </BrowserRouter>

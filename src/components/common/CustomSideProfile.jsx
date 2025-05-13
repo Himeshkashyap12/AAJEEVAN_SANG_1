@@ -7,11 +7,15 @@ import { useNavigate } from "react-router-dom";
 import partner from "../../assets/icons/partner.png"
 import language from "../../assets/icons/language.png"
 import help from "../../assets/icons/help.png"
+import { useState } from "react";
+import CustomModel from "./CustomModel";
 const CustomSideProfile = () => {
+    const [openModel,setOpenModel]=useState(false)
+    const [ModelName,setModelName]=useState("notification")
     const navigate=useNavigate()
     return (
         <>
-            <div className="xl:w-[25%] w-[40%] mx-auto shadow-2xl rounded-xl  right-[50px] mt-[40px] p-[24px] ">
+            <div className="shadow-2xl rounded-xl  mt-[40px] p-[24px] ">
                 <div className="flex flex-col  gap-[24px]">
                     <div className="flex flex-col justify-center items-center">
                         <Avatar className="!size-[100px]" src={profile} />
@@ -27,7 +31,7 @@ const CustomSideProfile = () => {
                             <CustomText className={"text-[12px] !text-[#fff] font-[400]"} text={"Complete your profile "} />
                         </div>
                         <div>
-                            <CustomButtonTwo onclick={()=>{navigate("edit-profile")}} value={"Edit Profile"} />
+                            <CustomButtonTwo onclick={()=>{navigate("/edit-profile")}} value={"Edit Profile"} />
                         </div>
                     </div>
                 </div>
@@ -36,7 +40,7 @@ const CustomSideProfile = () => {
                     <div onClick={()=>{navigate("/partner-preference")}}  className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
-                                 <Image src={partner} className="!w-[20px] !h-[30px] object-fit"/>
+                                 <Image preview={false} src={partner} className="!w-[20px] !h-[30px] object-fit"/>
                             </div>
                             <div className="flex flex-col gap-[10px]">
                                 <CustomText className={"text-[14px] font-[500]"} text={"Partner Preference"} />
@@ -45,7 +49,7 @@ const CustomSideProfile = () => {
                         </div>
                         <div><RightOutlined /></div>
                     </div>
-                    <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
+                    <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer" onClick={()=>{setOpenModel(true),setModelName("notification")}}>
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
                                  <BellFilled style={{ color: "#F81B3E", fontSize: "24px" }} />
@@ -57,7 +61,7 @@ const CustomSideProfile = () => {
                         </div>
                         <div><RightOutlined /></div>
                     </div>
-                    <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer">
+                    <div className="flex justify-between items-center border-b border-[#EFF0F7] pb-[24px] cursor-pointer"  onClick={()=>{setOpenModel(true),setModelName("language")}}>
                         <div className="flex gap-[16px] items-center">
                             <div className="flex justify-center items-center bg-[#FDCED5] rounded-full size-[50px]">
                             <Image src={language} className="!w-[24px] !h-[24px] object-fit"/>
@@ -85,6 +89,7 @@ const CustomSideProfile = () => {
                     </div>
                 </div>
             </div>
+            <CustomModel width={"800px"} footer={false} setOpenModel={setOpenModel} openModel={openModel}  title={ModelName==="notification"?"Notification":"Choose your Language"} modelBody={ModelName==="notification"?"notification":"language"}/>
         </>
     )
 }

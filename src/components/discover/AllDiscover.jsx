@@ -1,13 +1,15 @@
-import ProfileCard from "../common/ProfileCard";
-import ProfileDetails from "../common/ProfileDetails"
+import { Link } from "react-router-dom";
+import ProfileCard from "../common/profile/ProfileCard";
 const AllDiscover=({allDiscover})=>{
-    return(
+      return(
         <>
-        <div className="w-[80%] ps-[50px] pe-[20px] flex flex-col gap-[20px] ">
-        {allDiscover?.map((item)=>{
+        <div className="flex flex-col gap-[20px] ">
+        {allDiscover?.map((item,id)=>{
             return(
                 <>
+                <Link to={`/discover-details`} >
                   <ProfileCard />
+                  </Link>
                 </>
             )
         })}

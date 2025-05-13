@@ -23,7 +23,7 @@ const CustomHeader=()=>{
                     <Link className="!text-[16px] !text-[#fff] font-[400]" to={"/plan"}>Plan</Link>
                 </div>
             </div>
-            <div className="menu flex gap-[30px]">
+            <div className="menu flex gap-[30px] items-center">
                 <CustomSearch/>
                 <Button onClick={()=>{navigate("/plan")}}  className="!rounded-full !text-[14px] !font-[600]"><Avatar className="!size-[18px]" src={upgrade}/>    Upgrade</Button>
             </div>
