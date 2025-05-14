@@ -4,7 +4,7 @@ import profile from "../../../assets/profile/mesageProfile.jpg"
 import call from "../../../assets/chat/call.png"
 import video from "../../../assets/chat/video.png"
 import option from "../../../assets/chat/option.png"
-const HeaderChat=()=>{
+const HeaderChat=()=>{ 
     return(
          <div className="flex justify-between h-[60px] ">
                     <div className="flex gap-[16px] items-center  ">
