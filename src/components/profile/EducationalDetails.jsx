@@ -28,7 +28,7 @@ const EducationalDetails = ({setDocument,setCurrentStep}) => {
               src={logo}
             />
           </div>
-          <div className="flex flex-col gap-[20px]  max-h-[300px] overflow-y-auto">
+          <div className="flex flex-col gap-[20px]  max-h-[400px] overflow-y-auto">
             <div className="flex flex-col ">
               <CustomText
                 className={"!text-start !text-[24px] font-[500] "}
@@ -83,7 +83,6 @@ const EducationalDetails = ({setDocument,setCurrentStep}) => {
             icon={<div className="flex gap-2 items-center "><PlusCircleOutlined  style={{color:"#545454"}}/> <CustomText className={"!text-[20px] !text-[#D9D9D9]"} text={"|"}/></div>}
             phoneNumber={true}
                   placeholder={"Choose Document"}
-                  className={"!w-[200px]"}
                 />
             </Col>
             <Col span={12}>

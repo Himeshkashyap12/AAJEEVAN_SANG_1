@@ -1,12 +1,14 @@
 import { Input, InputAdornment } from "@mui/material";
 import CustomText from "./CustomText";
-const CustomInput=({placeholder,width,type,phoneNumber,onchange,className,required ,icon})=>{
+const CustomInput=({placeholder,width,type,phoneNumber,onchange,className,required ,icon,name,value})=>{
     return(
       <div className="relative">
         <Input
+        name={name}
+        value={value}
         type={type}
         required
-        onchange={onchange}
+        onChange={onchange}
           id="input-with-icon-adornment"
           color="black"
           placeholder={placeholder??"Enter your text here"}

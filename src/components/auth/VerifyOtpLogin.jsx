@@ -15,7 +15,7 @@ const VerifyOtpLogin = ({ setAuth }) => {
         <div>
           <Image preview={false} className="!h-[50px] !w-[200px]" src={logo} />
         </div>
-        <CustomText className={"!text-[24px] font-[500]"} text={"Enter OTP to Sign up"} />
+        <CustomText className={"!text-[24px] font-[500]"} text={"Enter OTP to Sign In"} />
        <div className="flex flex-col gap-1">
          <CustomText
           className={"!text-[12px] font-[300] "}
@@ -26,7 +26,7 @@ const VerifyOtpLogin = ({ setAuth }) => {
           className={"!text-[12px] font-[300] !text-[#B1B1B1] "}
           text={`+91 x x x x x x x x x x `}
         />
-        <Image className="!size-[13px]" src={editIcon}/>
+        <Image preview={false} className="!size-[13px]" src={editIcon}/>
         </div>
         </div>
         <div className="px-5">

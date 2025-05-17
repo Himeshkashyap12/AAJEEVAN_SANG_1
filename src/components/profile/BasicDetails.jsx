@@ -17,7 +17,7 @@ const BasicDetails = ({setCurrentStep}) => {
               src={logo}
             />
           </div>
-          <div className="flex flex-col gap-[16px]  max-h-[400px] overflow-y-auto">
+          <div className="flex flex-col gap-[16px]  h-[400px] overflow-y-auto">
           <div className="flex flex-col ">
             <CustomText
               className={"!text-start !text-[24px] font-[500] "}

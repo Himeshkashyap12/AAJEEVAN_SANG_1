@@ -1,6 +1,6 @@
 import { Modal } from "antd";
 import CustomText from "./CustomText";
-
+import "../common/common.css"
 const CustomModel=({openModel,setOpenModel,modelBody,footer,title,width})=>{
      const handleOk = () => {
     setOpenModel(false);
@@ -10,10 +10,10 @@ const CustomModel=({openModel,setOpenModel,modelBody,footer,title,width})=>{
     setOpenModel(false);
   };
     return(
-        <>
+        <div className="custom-modal">
          
       <Modal
-      width={width}
+        width={width}
         centered
         title={<CustomText className={"!text-[24px] font-[500] "} text={title}/>}
         open={openModel}
@@ -24,7 +24,7 @@ const CustomModel=({openModel,setOpenModel,modelBody,footer,title,width})=>{
       >
         {modelBody}
       </Modal>
-        </>
+        </div>
     )
 }
 export default CustomModel;

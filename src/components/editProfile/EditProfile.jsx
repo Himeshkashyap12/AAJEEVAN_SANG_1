@@ -8,7 +8,7 @@ import BasicInformation from "./BasicInformation";
 import FamilyInformation from "./FamilyInformation";
 import SocialInformation from "./SocialInformation";
 import HabitInformation from "./HabitInformation";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 const EditProfile = () => {
   const [selectedKey, setSelectedKey] = useState(1);
   const editItems = [

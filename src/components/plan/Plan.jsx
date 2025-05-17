@@ -1,133 +1,236 @@
 import { Avatar, Col, Image, Row } from "antd";
-import backgroundImageUrl from "../../assets/plan/plan.jpg"
+import backgroundImageUrl from "../../assets/plan/plan.jpg";
 import CustomText from "../common/CustomText";
 import { CheckOutlined } from "@ant-design/icons";
 import CustomButtonTwo from "../common/CustomButtonTwo";
+import Slider from "react-slick";
+import "./plan.css"
 const Plan = () => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const planData = [
+    {
+      planName: "Basic Plan(Free)",
+      subtitle: "Best for Browsing",
+      feature: [
+        "Create Profile & Browse Matches",
+        "Send 5 Interest Requests per Week",
+        "Cannot View Contact Details",
+        "Limited Search Access",
+        "Green Tick After KYC",
+      ],
+      greenTick: "Green Tick After KYC",
+    },
+    {
+      planName: "Silver Plan",
+      subtitle: "Perfect for Starters",
+      affordable: "(Most Affordable Paid Plan)",
+      feature: [
+        "All Basic Features +",
+        " Unlock 5 Contact Details per Week",
+        "Send 10 Messages per Month",
+        "Ad-Free Experience",
+        "Basic Horoscope Matching",
+        "Priority Email Support",
+        "Green Tick After KYC",
+      ],
+      greenTick: "Green Tick After KYC",
+    },
+    {
+      planName: "Gold Plan",
+      subtitle: "Recommended Plan",
+      affordable: "Best for Finding Matches Faster",
+      feature: [
+        " All Silver Features +",
+        "Unlock 10 Contact Details per Week",
+        "Send 30 Messages per Month",
+        "Profile Boost for Higher Visibility (More Profile Views)",
+        "Advanced Search Filters (Profession, Income, Education, etc.)",
+        "Horoscope Compatibility Report",
+        "WhatsApp Support for Queries",
+        "Green Tick After KYC",
+      ],
+      greenTick: "Green Tick After KYC",
+    },
+    {
+      planName: "Platinum Plan",
+      subtitle: " Premium Matchmaking Features",
+      affordable: "Best for Serious  Matchmakers",
+      feature: [
+        "All Gold Features +",
+        "Unlock Unlimited Contact Details",
+        "Send Unlimited Messages",
+        "Featured Profile Placement (Top Search Results)",
+        "Personalized Match Recommendations",
+        "Exclusive Matchmaking Insights (who viewed your profile, best time to message, etc.)",
+        "Dedicated Relationship Advisor for Guidance",
+        "Green Tick After KYC",
+        "VIP Badge Special Status)"
+      ],
+      greenTick: "Green Tick After KYC",
+    },
+    {
+      planName: "Diamond VIP Plan",
+      subtitle: "The Ultimate Matchmaking Experience",
+      affordable: "Most Exclusive & Powerful Plan",
+      feature: [
+        " All Platinum Features +",
+        "Featured Profile Placement (Expert Help to Find the Right Match)",
+        "Guaranteed Matchmaking Assistance (We help connect you with verified, serious profiles)",
+        "Personalized Profile Writing Assistance (Make your profile stand out)",
+        "Exclusive Invitations to Offline/Online Meetups & Matrimonial Events (Expert Help to Find the Right Match)",
+        "Premium Privacy Settings (Hide Profile from Non-Serious Users",
+        "Premium Privacy Settings (Hide Profile from Non-Serious Users)",
+        "VIP Tick (Highest Priority & Trust Status)"
+      ],
+      greenTick: "Green Tick After KYC",
+    },
+  ];
+
+  function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: ",block", background: "#F81B3E",borderRadius:"50%" ,color:"#fff" ,height:"30px",width:"30px", display:"flex",justifyContent:"center",alignItems:"center" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#F81B3E",borderRadius:"50%" ,color:"#fff" ,height:"30px",width:"30px" ,display:"flex",justifyContent:"center",alignItems:"center"}}
+      onClick={onClick}
+    />
+  );
+}
   return (
     <>
-      <div className="h-[94vh] " style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+      <div
+        className="h-[100vh] "
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="w-[70%] mx-auto !py-[50px]">
           <div className="flex flex-col w-[73%] ">
-            <CustomText className={"!text-[50px] !font-[400]"} text={"Plans & Pricing"} />
-            <CustomText className={"!text-[18px] !font-[400] !text-[#848199]"} text={"Explore our flexible pricing plans designed to suit every budget on your journey to find love. Choose from basic to premium options, each offering unique features to enhance your matchmaking experience."} />
+            <CustomText
+              className={"!text-[50px] !font-[400]"}
+              text={"Plans & Pricing"}
+            />
+            <CustomText
+              className={"!text-[18px] !font-[400] !text-[#848199]"}
+              text={
+                "Explore our flexible pricing plans designed to suit every budget on your journey to find love. Choose from basic to premium options, each offering unique features to enhance your matchmaking experience."
+              }
+            />
           </div>
-          <Row className="bg-[#FFFFFF80] backdrop-blur-sm max-h-[500px]  rounded-xl p-[50px] mt-[100px]">
-            <Col span={8}>
-              <div className="flex flex-col gap-[24px] ">
-                <div className="flex items-baseline gap-1">
-                  <CustomText className={"!text-[36px] font-[700] "} text={"₹ 199"} />
-                  <CustomText className={"!text-[18px] font-[500] !text-secondary"} text={"/month"} />
-                </div>
-                <div className="flex flex-col gap-[18px]">
-                  <CustomText className={"!text-[28px] font-[700] "} text={"Weekly plan"} />
-                  <CustomText className={"!text-[18px] font-[600] !text-secondary"} text={"Unleash the power of automation."} />
-                </div>
-                <div className="flex flex-col gap-[18px] pt-[24px]">
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"Unlimited Messaging"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"7 Profiles Interactions"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"No Boost"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"No In-app calling available"} />
-                  </div>
-                  <div className=" flex justify-center w-[70%]">
-                    <CustomButtonTwo className={"!text-[16px] !border-none  w-[226px] font-[500] !bg-[#231D4F] !text-[#fff]"} value={"Choose plan"} />
-                  </div>
+          <div className="slider-container bg-[#FFFFFF80] backdrop-blur-sm max-h-[700px]  w-[1400px] rounded-xl p-[20px] mt-[100px]">
+            <Slider {...settings}>
+              {planData?.map((item, idx) => {
+                return (
+                  <div key={idx} className="group hover:bg-[#F81B3E] min-h-[550px]  hover:p-5  hover:rounded-xl  shadow-2xl px-5 py-5 mx-2 ">
+                    <div  className="flex items-baseline gap-1">
+                      <div className="plan">
+                      <CustomText
+                        className={"group-hover:!text-white group-hover:!text-[40px] plan-heading !text-[30px]  font-[700] !text-[#231D4F] "}
+                        text={item?.planName}
+                      />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-[18px]">
+                      <CustomText
+                        className={" group-hover:!text-white !text-[18px] font-[600] !text-[#444444]"}
+                        text={item?.subtitle}
+                      />
+                    {/* <div className="flex flex-col gap-[18px]"> */}
+                      <CustomText
+                        className={"group-hover:!text-white !text-[16px] font-[500] !text-secondary"}
+                        text={item?.affordable}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-[18px] pt-[24px] h-[300px] overflow-auto">
+                      {item?.feature?.map((item, idx) => {
+                        return (
+                          <div className="flex items-center gap-[16px] ">
+                            <CheckOutlined
+                              className="!rounded-full size-[16px] flex justify-center items-center p-1"
+                              style={{
+                                fontSize: "12px",
+                                background: "#05CC30",
+                                color: "#fff",
+                                fontWeight: "bold",
+                              }}
+                            />
+                            <CustomText
+                              className={
+                                "group-hover:!text-white !text-[18px] font-[400] !text-secondary "
+                              }
+                              text={item}
+                            />
+                          </div>
+                        );
+                      })}
 
-                </div>
-              </div>
-            </Col>
-            <Col span={8}>
-              <div className="flex flex-col gap-[24px]">
-                <div className="flex items-baseline gap-1">
-                  <CustomText className={"!text-[36px] font-[700] "} text={"₹ 666"} />
-                  <CustomText className={"!text-[18px] font-[500] !text-secondary"} text={"/month"} />
-                </div>
-                <div className="flex flex-col gap-[18px]">
-                  <CustomText className={"!text-[28px] font-[700] "} text={"Basic plan"} />
-                  <CustomText className={"!text-[18px] font-[600] !text-secondary"} text={"Advanced tools to take your work to the next level."} />
-                </div>
-                <div className="flex flex-col gap-[18px]">
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"Unlimited Messaging"} />
+                     
+                    </div>
+                     <div className=" flex justify-center w-[70%] pt-[20px]">
+                        <CustomButtonTwo
+                          className={
+                            "!text-[16px] !border-none  w-[226px] font-[500] !bg-[#231D4F] !text-[#fff]"
+                          }
+                          value={"Choose plan"}
+                        />
+                      </div>
                   </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"30 Profiles Interactions"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"2 Boosts for 2 hours (1 in a day)"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#F81B3E", color: "#fff", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-secondary "} text={"In-app calling available"} />
-                  </div>
-                  <div className=" flex justify-center w-[70%]">
-                    <CustomButtonTwo className={"!text-[16px] !border-none w-[226px] font-[500] !bg-[#231D4F] !text-[#fff]"} value={"Choose plan"} />
-                  </div>
-
-                </div>
-              </div>
-            </Col>
-            <Col span={8}>
-              <div className="relative flex flex-col px-[24px] pb-[12px] gap-[24px] bg-[#F81B3E] rounded-3xl  -top-[150px]  pt-[150px]">
-                <div className="absolute bg-[#FFDA58] top-0 right-10 px-[24px] py-[12px] rounded-b-2xl">
-                  <CustomText className={"text-[12px] font-[800] !text-[#F81B3E]"} text={"MOST POPULAR"} />
-                </div>
-                <div className="flex items-baseline gap-1">
-                  <CustomText className={"!text-[36px] font-[700] !text-white "} text={"₹ 1999"} />
-                  <CustomText className={"!text-[18px] font-[500] !text-white"} text={"/month"} />
-                </div>
-                <div className="flex flex-col gap-[18px]">
-                  <CustomText className={"!text-[28px] font-[700] !text-[#fff]"} text={"Advance plan"} />
-                  <CustomText className={"!text-[18px] font-[600] !text-white"} text={"Automation plus enterprice-grade features."} />
-                </div>
-                <div className="flex flex-col gap-[8px]">
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#fff", color: "#F81B3E", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-white "} text={"Multi-step zap"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#fff", color: "#F81B3E", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-white "} text={"Ultimated Premium Apps"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#fff", color: "#F81B3E", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-white "} text={"Ultimated users Team"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#fff", color: "#F81B3E", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-white "} text={"Advance Admin"} />
-                  </div>
-                  <div className="flex items-center gap-[16px]">
-                    <CheckOutlined className="!rounded-full size-[16px] flex justify-center items-center p-1" style={{ fontSize: "12px", background: "#fff", color: "#F81B3E", fontWeight: "bold" }} />
-                    <CustomText className={"!text-[18px] font-[400] !text-white "} text={"Custom Data Retention"} />
-                  </div>
-                  <div className=" flex justify-center w-[70%] mx-auto">
-                    <CustomButtonTwo className={"!text-[16px] w-[226px] !border-none  font-[500] !bg-white !text-[#F81B3E]"} value={"Choose plan"} />
-                  </div>
-
-                </div>
-
-              </div>
-            </Col>
-          </Row>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 export default Plan;

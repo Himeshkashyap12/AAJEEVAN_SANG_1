@@ -3,7 +3,7 @@ import { Avatar, Col, Row, Tabs } from "antd";
 import CustomText from "../common/CustomText";
 import arrowleft from "../../assets/icons/arrowleft.png";
 import NotificationDetails from "./NotificationDetails";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 
 const Notification = () => {
   const [selectedKey, setSelectedKey] = useState(1);

@@ -9,17 +9,61 @@ import CustomSelect from "../common/CustomSelect";
 import CustomCheckBox from "../common/CustomCheckbox";
 const SocialDetails=({setCurrentStep})=>{
     const [disableNext, setDisableNext] = useState(false);
-    const dietOption=[
-      {  name:"Vegetarian",  value:"vegetarian"},
-      {  name:"Non Vegetarian",  value:"nonVegetarian"},
-      {  name:"Eggitarian",  value:"eggitarian"},
-      {  name:"Vegan",  value:"vegan"},
+    const [inputValue, SetInputValue] = useState({
+    maritalStatus: "",
+    homeTown: "",
+    motherToungue: "",
+    relegion: "",
+    caste: "",
+    gothra: "",
+    manglik: "",
+  });
+    const maritalStatusOptions=[
+      {  label:"Single / Never married",  value:"vegetarian"},
+      {  label:"Widowed / Widower",  value:"wodow"},
+      {  label:"Divorced",  value:"divorced"},
+      {  label:"Vegan",  value:"vegan"},
   
     ]
-    const dietOptionHandler=(e)=>{
-      console.log(e);
-      
-    }
+     const motherToungeOptions=[
+      {  label:"Hindi",  value:"hindi"},
+      {  label:"Marathi",  value:"matrathi"},
+      {  label:"Punjabi",  value:"punjabi"},
+      {  label:"Bengali",  value:"bengali"},
+  
+    ]
+     const relegionOptions=[
+      {  label:"Hindu",  value:"hindi"},
+      {  label:"Islam",  value:"islam"},
+      {  label:"Christian",  value:"christian"},
+      {  label:"Sikh",  value:"sikh"},
+  
+    ]
+    const CasteOtions=[
+      {  label:"Hindi-Kamboj",  value:"hindi"},
+      {  label:"Hindu-kamma",  value:"islam"},
+      {  label:"Hindu-Kashmiripandit",  value:"christian"},
+  
+    ]
+    const homeTownOption=[
+      {  label:"Lucknow",  value:"lucknow"},
+      {  label:"Delhi",  value:"delhi"},
+      {  label:"Mumbai",  value:"mumbai"},
+  
+    ]
+     const manglikOtion=[
+      {  label:"Manglik",  value:"manglik"},
+      {  label:"Non-manglik",  value:"nonManglik"},
+  
+    ]
+    const dietOption=[{}]
+   const inputHandler = (e) => {
+    const { name, value } = e.target;
+      SetInputValue({ ...inputValue, [name]: value });
+  };
+  const selectHandler = (e, select) => {
+    SetInputValue({ ...inputValue, [select.selected]: e.target.value });
+  };
     return(
         <>
           <Row>
@@ -31,7 +75,7 @@ const SocialDetails=({setCurrentStep})=>{
               src={logo}
             />
           </div>
-          <div className="flex flex-col gap-[20px]  max-h-[300px] overflow-y-auto">
+          <div className="flex flex-col gap-[20px]  max-h-[400px] overflow-y-auto">
             <div className="flex flex-col ">
               <CustomText
                 className={"!text-start !text-[24px] font-[500] "}
@@ -43,39 +87,52 @@ const SocialDetails=({setCurrentStep})=>{
               />
             </div>
         
-          <Row>
+          <Row gutter={[20,20]}>
             <Col span={12}>
-            <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+            
+               <CustomSelect
+                  value={inputValue?.maritalStatus}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "maritalStatus" })
+                  }
+                  options={maritalStatusOptions}
+                  placeholder="Marital Status"
+                  className="!text-secondary"
                 />
                 </Col>
             <Col span={12}>
-            <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+              <CustomSelect
+                  value={inputValue?.homeTown}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "maritalStatus" })
+                  }
+                  options={homeTownOption}
+                  placeholder="Home Town"
+                  className="!text-secondary"
                 />
                 </Col>
           </Row>
-          <Row>
+          <Row gutter={[20,20]}> 
             <Col span={12}>
-            <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+             <CustomSelect
+                  value={inputValue?.motherToungue}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "motherToungue" })
+                  }
+                  options={motherToungeOptions}
+                  placeholder="Marital Status"
+                  className="!text-secondary"
                 />
                 </Col>
             <Col span={12}>
             <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+                  value={inputValue?.relegion}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "relegion" })
+                  }
+                  options={relegionOptions}
+                  placeholder="Marital Status"
+                  className="!text-secondary"
                 />
                 </Col>
           </Row>
@@ -83,11 +140,14 @@ const SocialDetails=({setCurrentStep})=>{
             <Row>
             <Col span={24}>
             <div className="flex flex-col">
-                <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[430px]"}
-                  option={dietOption}
+               <CustomSelect
+                  value={inputValue?.relegion}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "caste" })
+                  }
+                  options={CasteOtions}
+                  placeholder="Caste"
+                  className="!text-secondary"
                 />
                 <CustomCheckBox value={
                     <div className="flex flex-col ">
@@ -98,23 +158,30 @@ const SocialDetails=({setCurrentStep})=>{
                 </div>
               </Col>
             </Row>
-            <Row>
-            <Col span={12}>
+            <Row gutter={[20,20]} >
+               <Col span={12}>
             <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+                  value={inputValue?.manglik}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "manglik" })
+                  }
+                  options={manglikOtion}
+                  placeholder="Gothara"
+                  className="!text-secondary"
                 />
                 </Col>
             <Col span={12}>
             <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Mother Occupation"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
+                  value={inputValue?.manglik}
+                  onChange={(e) =>
+                    selectHandler(e, { selected: "manglik" })
+                  }
+                  options={manglikOtion}
+                  placeholder="Manglik"
+                  className="!text-secondary"
                 />
                 </Col>
+           
           </Row>
             
            

@@ -3,7 +3,7 @@ import {  useState } from "react";
 import CustomText from "../common/CustomText";
 import MyMessages from "./MyMessages";
 import MyCalls from "./MyCalls";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 // import MyLikes from "./MyLikes";
 // import LikesMe from "./LikesMe";
 const Messages=()=>{

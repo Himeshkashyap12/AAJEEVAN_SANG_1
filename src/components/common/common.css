@@ -2,7 +2,7 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid #F81B3E; /* Optional: Set a border bottom color when inactive */
-    width: 50px;
+    width: 70px;
 
 }
 
@@ -16,3 +16,9 @@
     border-radius: 16px!important;
 }
 .brief{scrollbar-color: pink lightblue!important;}
+.switch span.ant-switch-inner{background-color: #FDCED5!important;height: 12px;}
+.switch .ant-switch {background-color: #fff;}
+.switch .ant-switch.ant-switch-checked:hover{background-color: #fff;}
+.switch .ant-switch:hover{background-color: #fff;}
+.switch .ant-switch .ant-switch-handle::before{background-color: #F81B3E;}
+.ant-modal-content{border-radius: 16px!important;}

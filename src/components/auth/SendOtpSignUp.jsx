@@ -5,7 +5,12 @@ import CustomText from "../common/CustomText";
 import CustomInput from "../common/CustomInput";
 import CustomCheckbox from "../common/CustonCheckbox";
 import CustomButton from "../common/CustomButton";
+import { useState } from "react";
 const SendOtpSignUp = ({ setAuth }) => {
+    const [mobile,setMobile]=useState("");
+    console.log(mobile);
+    
+  
   return (
     <Row>
       <div className="flex flex-col gap-[16px] items-center bg-white rounded-2xl w-[480px] py-5 shadow-2xl">
@@ -20,6 +25,8 @@ const SendOtpSignUp = ({ setAuth }) => {
         <div className="flex flex-col gap-[16px]">
           <div className="px-5">
           <CustomInput
+          name={"mobile"}
+          onchange={(e)=>{setMobile(e.target.value)}}
             placeholder={"Enter your mobile number"}
             className={"!w-[328px]"}
             phoneNumber

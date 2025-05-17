@@ -1,9 +1,10 @@
 import { Button } from "antd";
 
-const CustomButtonTwo=({value ,onclick,className})=>{
+const CustomButtonTwo=({value ,onclick,className,style  })=>{
     return(
         <>
         <Button
+        style={{style}}
         onClick={onclick}
         className={`text-white !rounded-full !py-5 ${className}`}
       >

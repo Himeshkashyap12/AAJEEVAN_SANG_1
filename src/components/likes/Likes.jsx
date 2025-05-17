@@ -4,7 +4,7 @@ import {  useState } from "react";
 import CustomText from "../common/CustomText";
 import MyLikes from "./MyLikes";
 import LikesMe from "./LikesMe";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 const Likes=()=>{
      const [selectedKey,setSelectedKey]=useState(1)
         const tabSelectChange = key => {

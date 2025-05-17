@@ -1,14 +1,17 @@
 import { Avatar, Image, Progress } from "antd";
-import profile from "../../assets/profile/profilePhoto.jpg"
-import CustomText from "./CustomText";
-import CustomButtonTwo from "./CustomButtonTwo";
+import profile from "../../../assets/profile/profilePhoto.jpg"
+import CustomText from "../CustomText";
+import CustomButtonTwo from "../CustomButtonTwo";
 import { BellFilled, RightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import partner from "../../assets/icons/partner.png"
-import language from "../../assets/icons/language.png"
-import help from "../../assets/icons/help.png"
+import partner from "../../../assets/icons/partner.png"
+import language from "../../../assets/icons/language.png"
+import help from "../../../assets/icons/help.png"
 import { useState } from "react";
-import CustomModel from "./CustomModel";
+import CustomModel from "../CustomModel";
+// import NotificationSetting from "./NotificationSetting";
+import LanguageSetting from "./LanguageSetting";
+import NotificationSetting from "./NoificationSetting";
 const CustomSideProfile = () => {
     const [openModel,setOpenModel]=useState(false)
     const [ModelName,setModelName]=useState("notification")
@@ -89,7 +92,7 @@ const CustomSideProfile = () => {
                     </div>
                 </div>
             </div>
-            <CustomModel width={"800px"} footer={false} setOpenModel={setOpenModel} openModel={openModel}  title={ModelName==="notification"?"Notification":"Choose your Language"} modelBody={ModelName==="notification"?"notification":"language"}/>
+            <CustomModel width={ModelName==="notification"?"900px":"650px"} footer={false} setOpenModel={setOpenModel} openModel={openModel}  title={ModelName==="notification"?"Notification":"Choose your Language"} modelBody={ModelName==="notification"?<NotificationSetting/>:<LanguageSetting/>}/>
         </>
     )
 }

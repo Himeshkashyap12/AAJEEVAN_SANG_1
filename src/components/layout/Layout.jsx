@@ -1,7 +1,6 @@
 import React from 'react';
 import { Flex, Layout } from 'antd';
 import CustomHeader from '../common/Header';
-import CustomSideProfile from '../common/CustomSideProfile';
 import { Outlet } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -35,9 +34,6 @@ const CustomLayout=({sidebar=true})=>{
         <Content  style={contentStyle}>
           <Outlet/>
         </Content>
-        {/* {sidebar && <Sider  style={siderStyle}>
-            <CustomSideProfile/>
-          </Sider>} */}
       </Layout>
     </Layout>
     </Flex>

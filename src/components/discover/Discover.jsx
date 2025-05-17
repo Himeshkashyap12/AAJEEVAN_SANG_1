@@ -4,7 +4,7 @@ import "./discover.css"
 import CustomText from "../common/CustomText";
 import AllDiscover from "./AllDiscover.jsx";
 import SelectedDiscover from "./SelectedDiscover";
-import CustomSideProfile from "../common/CustomSideProfile.jsx";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile.jsx";
 const Discover=()=>{
     const [selectedKey,setSelectedKey]=useState(1)
     const tabSelectChange = key => {

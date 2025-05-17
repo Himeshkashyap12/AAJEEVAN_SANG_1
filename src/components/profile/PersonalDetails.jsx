@@ -8,17 +8,14 @@ import OtpInput from "../common/OtpInput";
 import CustomSelect from "../common/CustomSelect";
 const PersonalDetails = ({ setCurrentStep }) => {
   const [disableNext, setDisableNext] = useState(false);
-  const dietOption=[
-    {  name:"Vegetarian",  value:"vegetarian"},
-    {  name:"Non Vegetarian",  value:"nonVegetarian"},
-    {  name:"Eggitarian",  value:"eggitarian"},
-    {  name:"Vegan",  value:"vegan"},
+    const [diet, setDiet] = useState("");    
+  const dietOptions = [
+    { label: "Vegetarian", value: "vegetarian" },
+    { label: "Non-Vegetarian", value: "nonVegetarian" },
+    { label: "Eggitarian", value: "eggitarian" },
+    { label: "Vegan", value: "vegan" },
+  ];
 
-  ]
-  const dietOptionHandler=(e)=>{
-    console.log(e);
-    
-  }
 
   return (
     <>
@@ -47,7 +44,7 @@ const PersonalDetails = ({ setCurrentStep }) => {
                 className={"text-[18px] font-[600]"}
                 text={"Profile create for"}
               />
-              <div className="absolute top-0 left-27 text-[red]">*</div>
+              <div className="absolute top-0 left-30 text-[red]">*</div>
               <div className="flex gap-2">
                 <Button className="!rounded-full">Self</Button>
                 <Button className="!rounded-full">Daughter</Button>
@@ -58,17 +55,17 @@ const PersonalDetails = ({ setCurrentStep }) => {
             </div>
             <Row>
               <Col span={12}>
-                <div className="w-full flex gap-2">
+                <div className="w-full flex gap-2 items-center">
                   <CustomText text={"Height"} />
-                  <OtpInput length={2} />
+                  <OtpInput className length={2} />
                 </div>
               </Col>
               <Col span={12}>
-                <div className="w-full flex gap-2">
-                  <CustomText text={"Weight"} />
+                <div className="w-full flex gap-2 items-center">
+                  <CustomText className={"!max-w-[50]"} text={"Weight"} />
                   <CustomInput
                     placeholder={"Weight in Kg"}
-                    className={"!w-[150px]"}
+                    className={"!max-w-[190px]"}
                   />
                 </div>
               </Col>
@@ -81,12 +78,14 @@ const PersonalDetails = ({ setCurrentStep }) => {
                 />
               </Col>
               <Col span={12}>
-                <CustomSelect
-                handleSelect={(e)=>{dietOptionHandler(e)}}
-                  placeholder={"Weight in Kg"}
-                  className={"!w-[200px]"}
-                  option={dietOption}
-                />
+                  <CustomSelect
+                    name="diet"
+                    value={diet}
+                    onChange={(e) => setDiet(e.target.value)}
+                    options={dietOptions}
+                    placeholder="What's Your Diet?"
+                    className="!text-secondary"
+                  />
               </Col>
             </Row>
             <div className="relative flex flex-col gap-2">

@@ -1,6 +1,6 @@
 import { Col, Image, Progress, Row } from "antd";
 import HomeProfile from "./HomeProfile";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 import CustomText from "../common/CustomText";
 import CustomButtonTwo from "../common/CustomButtonTwo";
 import completeSideImage from "../../assets/profile/complete-profile.jpg";

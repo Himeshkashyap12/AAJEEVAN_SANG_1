@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 import ProfileDetails from "../common/profile/profileDetails/ProfileDetails";
 
 const DiscoverDetails=()=>{

@@ -4,6 +4,7 @@ import CustomText from "../common/CustomText";
 import CustomButton from "../common/CustomButton";
 import { useState } from "react";
 import CustomFileUpload from "../common/CustomFileUpload";
+import CustomUploadFile from "../common/UploadMultipleFIle";
 const UploadMultipleProfile=()=>{
     const [disableNext,setDisableNext]=useState(false)
     return(
@@ -30,7 +31,7 @@ const UploadMultipleProfile=()=>{
           </div>
         
           <div>
-            <CustomFileUpload/>
+            <CustomUploadFile/>
           </div>
           <Row>
             <div className="flex flex-col">

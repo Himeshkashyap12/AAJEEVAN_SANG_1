@@ -3,7 +3,7 @@ import { Avatar, Col, Row, Tabs } from "antd";
 import CustomText from "../common/CustomText";
 import arrowleft from "../../assets/icons/arrowleft.png";
 import PartnerPreferenceDetails from "./PartnerPrefferenceDetails";
-import CustomSideProfile from "../common/CustomSideProfile";
+import CustomSideProfile from "../common/sideProfile/CustomSideProfile";
 
 const PartnerPrefference = () => {
   const [selectedKey, setSelectedKey] = useState(1);
