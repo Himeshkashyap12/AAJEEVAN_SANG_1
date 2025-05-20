@@ -2,8 +2,8 @@ import { Avatar } from "antd";
 import CustomText from "../../common/CustomText";
 import profile from "../../../assets/profile/mesageProfile.jpg"
 // import call from "../../../assets/chat/call.png"
-import video from "../../../assets/chat/video.png"
-import option from "../../../assets/chat/option.png"
+// import video from "../../../assets/chat/video.png"
+// import option from "../../../assets/chat/option.png"
 const HeaderChat=()=>{ 
     return(
          <div className="flex justify-between h-[60px] ">
@@ -17,8 +17,8 @@ const HeaderChat=()=>{
                     <div className="flex flex-col  items-center">                    
                     <div className="flex gap-[16px] items-center">
                         {/* <div className="!size-[32px]"><Avatar src={call} className="w-full h-full"/></div> */}
-                        <div className="!size-[32px]"><Avatar src={video} className="w-full h-full"/></div>
-                        <div className="!size-[32px]"><Avatar src={option} className="w-full h-full"/></div>
+                        {/* <div className="!size-[32px]"><Avatar src={video} className="w-full h-full"/></div> */}
+                        {/* <div className="!size-[32px]"><Avatar src={option} className="w-full h-full"/></div> */}
                     </div>
                     </div>
                 </div>
