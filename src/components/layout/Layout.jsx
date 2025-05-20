@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Layout } from 'antd';
-import CustomHeader from '../common/Header';
+import CustomHeader from '../common/header/Header';
 import { Outlet } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;

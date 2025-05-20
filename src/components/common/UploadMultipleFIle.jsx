@@ -30,13 +30,13 @@ const CustomUploadFile=()=>{
       >
         {fileList.length >= 8 ? null : uploadButton}
       </Upload>
-      {previewImage && (
+      {/* {previewImage && (
         <Image
           wrapperStyle={{ display: 'none' }}
           preview={false}
           src={previewImage}
         />
-         )}  
+         )}   */}
         </>
     )
 }
