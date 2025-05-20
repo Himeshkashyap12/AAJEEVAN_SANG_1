@@ -12,7 +12,7 @@ const Personal = () => {
       ];
   return (
     <>
-      <div className="personal">
+      <div className="personal"> 
         <div
           style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
           className="py-2 rounded-full w-[140px] flex justify-center items-center"
