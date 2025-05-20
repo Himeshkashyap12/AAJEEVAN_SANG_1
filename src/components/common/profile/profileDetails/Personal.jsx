@@ -1,7 +1,7 @@
 import CustomSlider from "../../CustomSlider";
 import CustomText from "../../CustomText";
 import EditColoummn from "../../EditColumn";
-import profile1 from "../../../../assets/profile/insta1.png"
+import profile1 from "../../../assets/profile/insta1.png"
 import "./profile.css"
 const Personal = () => {
   const profileData = [
